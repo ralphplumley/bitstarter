@@ -3,9 +3,13 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
+var buffer = new Buffer(50);
+buffer.write("Hello from buffer text", "utf-8")
+
 app.get('/', function(request, response) {
 //	response.send('Cow Goes MOO');
-	 response.send(fs.readFileSync('index.html'));
+//	 response.send(fs.readFileSync('index.html'));
+	buffer.tostring('utf-8');
 	//response.send('Hello World 2!');
 });
 
