@@ -3,7 +3,8 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-	 response.send(fs.readFileSync('index.html'));
+	response.send('Cow Goes MOO');
+//	 response.send(fs.readFileSync('index.html'));
 	//response.send('Hello World 2!');
 });
 
